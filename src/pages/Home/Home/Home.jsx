@@ -8,7 +8,7 @@ const Home = () => {
     return (
     <div><div className=' d-flex gap-4 align-items-center  bg-warning'>
 
-    <img className='banner  ' src={banner} alt="" />
+    <img className='banner' src={banner} alt="" />
     <div className='text-center mt-4 '>
       <h1 className='title '>Test the Bengali foods</h1>
       <h4 >with the touch of the best chefs of Bangladesh</h4>
