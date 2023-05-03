@@ -7,10 +7,10 @@ import { Container } from 'react-bootstrap';
 const Main = () => {
     return (
         <div>
-            <Container><Header></Header>
-            <Container> <Home></Home></Container>
+            <Header></Header>
+             <Home></Home> 
            
-            <Footer></Footer></Container>
+            <Footer></Footer> 
             
         </div>
     );
