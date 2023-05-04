@@ -1,3 +1,19 @@
 .chef-container{
     background-color: orange;
 }
+.btn-container{
+    
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    position: relative;
+    
+    }
+    .btn-recipe{
+   
+     
+     
+    position: absolute;
+    bottom: 0px;
+    
+    }
+    

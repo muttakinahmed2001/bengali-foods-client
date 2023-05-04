@@ -22,7 +22,7 @@ const Header = () => {
                         <Nav className="mx-auto">
 
                            
-                              <Link to='/'>Home</Link>  
+                              <Link className='me-2' to='/'>Home</Link>  
                              
                              <Link>Blog </Link>
 
