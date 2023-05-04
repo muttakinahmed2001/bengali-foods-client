@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Chef from '../Chef/Chef';
 import './Chefs.css'
+import ChefDetails from '../../ChefDetails/ChefDetails/ChefDetails';
 
 const Chefs = () => {
     const [chefs,setChefs]=useState([]);
@@ -14,6 +15,7 @@ const Chefs = () => {
     return (
         <div className='chefs'>
             {chefs.map(chef => <Chef key={chef.id} chef={chef}></Chef>)}
+            
         </div>
     );
 };

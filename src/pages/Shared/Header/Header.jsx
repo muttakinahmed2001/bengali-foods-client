@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../../assets/logo.png';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -17,7 +18,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
 
-                            <Nav.Link href="#features">Home</Nav.Link>
+                            <Nav.Link href="#features">
+                              <Link to='/'>Home</Link>  
+                                </Nav.Link>
                             <Nav.Link href="#pricing">Blog</Nav.Link>
 
                         </Nav>
