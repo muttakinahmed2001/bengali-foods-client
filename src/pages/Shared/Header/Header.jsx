@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/logo.png';
+import { FaUserCircle } from 'react-icons/fa';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
+    const {user} = useContext(AuthContext);
     return (
         <div>
             <div className='text-center'>
@@ -18,17 +21,18 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
 
-                            <Nav.Link href="#features">
+                           
                               <Link to='/'>Home</Link>  
-                                </Nav.Link>
-                            <Nav.Link href="#pricing">Blog</Nav.Link>
+                             
+                             <Link>Blog </Link>
 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">User Profile</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                <Button variant="secondary">Login</Button>
-                            </Nav.Link>
+                           {user ? <Link className='text-black me-2'>   <FaUserCircle style={{fontSize:'2rem'}}></FaUserCircle> </Link> :
+                           
+                            
+                                <Button variant="secondary">Login</Button>}
+                             
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

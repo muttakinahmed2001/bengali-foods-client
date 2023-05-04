@@ -1,24 +1,92 @@
-import React  from 'react';
-import { Button, Card } from 'react-bootstrap';
-import {   useLoaderData, useParams } from 'react-router-dom';
+ 
+import { Button, Card, CardGroup, Container } from 'react-bootstrap';
+import {   useLoaderData  } from 'react-router-dom';
+import './ChefDetails.css'
 
 const ChefDetails = ( ) => {
    const chef = useLoaderData()
    console.log(chef)
+   const {name,picture,bio,numRecipes,experience,recipes, }=chef;
  
+   
     
     return (
-        <Card >
-      <Card.Img variant="top" src="holder.js/100px180" />
+        <Container><Card className='border chef-container' >
+        <Card.Img style={{height: '300px' ,width:'200px'}} variant="top" src={picture} />
+        <Card.Body>
+          <Card.Title> {name}</Card.Title>
+          <Card.Text>
+             {bio}
+          </Card.Text>
+          <Card.Text>
+            Number of recipes:  {numRecipes}
+          </Card.Text>
+          <Card.Text>
+              Year of experience: {experience}
+          </Card.Text>
+        
+        </Card.Body>
+      </Card>
+
+      {/* recopies */}
+
+      <CardGroup className='mt-5'>
+      <Card>
+        
+        <Card.Body>
+          <Card.Title>{recipes[0].name}</Card.Title>
+          <Card.Text>
+            <span> Ingredients:</span> {recipes[0].ingredients}
+          </Card.Text>
+          <Card.Text>
+              Cooking method: {recipes[0].method}
+          </Card.Text>
+          <Card.Text>
+              Ratings: {recipes[0].ratings}
+          </Card.Text>
+          <Button className='me-0' variant="primary">Favorite</Button>
+        </Card.Body>
+         
+      </Card>
+      <Card>
+        
       <Card.Body>
-        <Card.Title> </Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card  content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+          <Card.Title>{recipes[1].name}</Card.Title>
+          <Card.Text>
+            <span> Ingredients:</span> {recipes[1].ingredients}
+          </Card.Text>
+          <Card.Text>
+              Cooking method: {recipes[1].method}
+          </Card.Text>
+          <Card.Text>
+              Ratings: {recipes[1].ratings}
+          </Card.Text>
+          <Button className='me-0' variant="primary">Favorite</Button>
+        </Card.Body>
+         
+        
+      </Card>
+      <Card>
+        
+      <Card.Body>
+          <Card.Title>{recipes[2].name}</Card.Title>
+          <Card.Text>
+            <span> Ingredients:</span> {recipes[2].ingredients}
+          </Card.Text>
+          <Card.Text>
+              Cooking method: {recipes[2].method}
+          </Card.Text>
+          <Card.Text>
+              Ratings: {recipes[2].ratings}
+          </Card.Text>
+          <Button className='me-0' variant="primary">Favorite</Button>
+        </Card.Body>
+         
+         
+      </Card>
+    </CardGroup>
+      </Container>
+        
     );
 };
 
