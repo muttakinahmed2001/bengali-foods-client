@@ -6,9 +6,8 @@ import './ChefDetails.css'
 const ChefDetails = ( ) => {
    const chef = useLoaderData()
    console.log(chef)
-   const {name,picture,bio,numRecipes,experience,recipes, }=chef;
- 
-   
+   const {name,picture,likes,bio,numRecipes,experience,recipes, }=chef;
+  
     
     return (
         <Container><Card className='border chef-container' >
@@ -18,6 +17,9 @@ const ChefDetails = ( ) => {
           <Card.Title> {name}</Card.Title>
           <Card.Text>
              {bio}
+          </Card.Text>
+          <Card.Text>
+            Likes: {likes}
           </Card.Text>
           <Card.Text>
             Number of recipes:  {numRecipes}
@@ -45,7 +47,7 @@ const ChefDetails = ( ) => {
           <Card.Text className='mb-5'>
               Ratings: {recipes[0].ratings}
           </Card.Text>
-          <Button  className='btn-recipe bg-danger' variant="primary">Favorite</Button>
+          <Button   className='btn-recipe bg-danger' variant="primary">Favorite</Button>
         </Card.Body>
          
       </Card>

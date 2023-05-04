@@ -29,9 +29,9 @@ const Header = () => {
                         </Nav>
                         <Nav>
                            {user ? <Link className='text-black me-2'>   <FaUserCircle style={{fontSize:'2rem'}}></FaUserCircle> </Link> :
-                           
-                            
-                                <Button variant="secondary">Login</Button>}
+                           <Link to='/login'>
+                           <Button variant="secondary">Login</Button></Link>
+                            }
                              
                         </Nav>
                     </Navbar.Collapse>
