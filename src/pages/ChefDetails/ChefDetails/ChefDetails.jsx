@@ -5,10 +5,11 @@ import './ChefDetails.css'
 
 const ChefDetails = ( ) => {
    const chef = useLoaderData()
-    
+   
    console.log(chef)
    const {name,picture,likes,bio,numRecipes,experience,recipes, }=chef;
-  
+   
+    
     return (
       <Container> <div className="card mb-3 bg-warning" >
       <div className="row g-0">

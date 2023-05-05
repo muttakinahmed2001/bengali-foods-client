@@ -5,6 +5,7 @@ import ChefLayout from "../layouts/ChefLayout";
 import ChefDetails from "../pages/ChefDetails/ChefDetails/ChefDetails";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import Error from "../pages/Error/Error";
  
  
  
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'*',
+                element:<Error></Error>
             }
         ]
     },
@@ -37,7 +42,15 @@ const router = createBrowserRouter([
                 element:<ChefDetails></ChefDetails>,
                 loader: ({params}) => fetch (`https://assignment-10-server-muttakinahmed2001.vercel.app/chefs/${params.id}`)
                 
+            
+            },
+            
+                
+            {
+                path:'*',
+                element:<Error></Error>
             }
+            
 
         ]
     }
