@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card,   Container  } from 'react-bootstrap';
 import './Chef.css'
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const Chef = ({chef}) => {
     const {id,name,picture,experience,likes,numRecipes}=chef;
     
     return (
-        <div>
+        <Container>
             
              
           <Card>
@@ -31,7 +31,7 @@ const Chef = ({chef}) => {
           </Card>
         
            
-        </div>
+        </Container>
     );
 };
 
