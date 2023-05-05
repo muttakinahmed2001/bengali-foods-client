@@ -5,10 +5,10 @@ import './ChefDetails.css'
 
 const ChefDetails = ( ) => {
    const chef = useLoaderData()
+    
    console.log(chef)
    const {name,picture,likes,bio,numRecipes,experience,recipes, }=chef;
   
-    
     return (
       <Container> <div className="card mb-3 bg-warning" >
       <div className="row g-0">
@@ -22,11 +22,12 @@ const ChefDetails = ( ) => {
             <p className="card-text"><small className="text-body-secondary"> Likes: {likes}</small></p>
             <p className="card-text"><small className="text-body-secondary">  Number of recipes:  {numRecipes}</small></p>
             <p className="card-text"><small className="text-body-secondary">  Year of experience: {experience}</small></p>
+            
           </div>
         </div>
       </div>
     </div>
-         
+     
           <CardGroup className='mt-5 p-5'>
           <Card className='me-5 bg-warning'>
             
@@ -41,7 +42,7 @@ const ChefDetails = ( ) => {
               <Card.Text className='mb-5'>
                   Ratings: {recipes[0].ratings}
               </Card.Text>
-              <Button   className='btn-recipe bg-danger' variant="primary">Favorite</Button>
+              <Button  className='btn-recipe bg-danger btn-one' variant="primary">Favorite</Button>
             </Card.Body>
              
           </Card>
@@ -79,9 +80,12 @@ const ChefDetails = ( ) => {
               <Button  className='btn-recipe bg-danger' variant="primary">Favorite</Button>
             </Card.Body>
              
-             
+           
           </Card>
         </CardGroup>
+         
+ 
+ 
            </Container>
      
         
