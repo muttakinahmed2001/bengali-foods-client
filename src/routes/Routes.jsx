@@ -28,6 +28,10 @@ const router = createBrowserRouter([
                 element:<Register></Register>
             },
             {
+                path:'/blog',
+                element:<Blog></Blog>
+            },
+            {
                 path:'*',
                 element:<Error></Error>
             }

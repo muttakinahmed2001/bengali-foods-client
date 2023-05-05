@@ -5,6 +5,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { useContext } from 'react';
+import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -29,9 +30,9 @@ const Header = () => {
                         <Nav className="mx-auto">
 
 
-                            <Link className='me-2 text-decoration-none text-black' to='/'>Home</Link>
+                            <ActiveLink className='me-2 text-decoration-none text-black' to='/'>Home</ActiveLink>
 
-                            <Link className='text-decoration-none text-black'>Blog </Link>
+                            <ActiveLink className='text-decoration-none text-black'>Blog </ActiveLink>
 
                         </Nav>
                         <Nav>
