@@ -6,7 +6,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
     const [error,setError]=useState('');
-    const {signIn,googleSignIn}=useContext(AuthContext);
+    const {signIn,googleSignIn,githubSignIn}=useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -34,7 +34,18 @@ signIn(email,password)
     console.log(user)
     setError('')
 })
+
+
 .catch(error => setError(error.message))
+    }
+
+    const handleGithubSignIn = () => {
+        githubSignIn()
+        .then(result => {
+            const user = result.user;
+            setError('')
+        })
+        .catch(error => setError(error.message))
     }
     return (
          
@@ -67,7 +78,7 @@ signIn(email,password)
                 <Button onClick={handleGoogleSignIn} className='mb-2 mt-2' variant="primary" type="submit">
                     Sign-in with google
                 </Button>  <br />
-                <Button variant="primary" type="submit">
+                <Button onClick={handleGithubSignIn} variant="primary" type="submit">
                     Sign-in with github
                 </Button>
             </Form></Container>
