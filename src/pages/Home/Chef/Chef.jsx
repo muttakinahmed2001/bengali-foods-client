@@ -11,8 +11,8 @@ const Chef = ({chef}) => {
         <Container>
             
              
-          <Card>
-            <Card.Img className='img' variant="top" src={picture} />
+          <Card className='p-3'>
+            <Card.Img  className='img ' variant="top" src={picture} />
             <Card.Body>
               <Card.Title>{name}</Card.Title>
               <Card.Text>
