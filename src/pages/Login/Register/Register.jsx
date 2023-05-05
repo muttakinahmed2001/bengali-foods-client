@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
+     const [error,setError]=useState('')
     const { createUser } = useContext(AuthContext);
 
     const handleRegister = event => {
@@ -15,14 +16,16 @@ const Register = () => {
         const photo = form.photo.value
         const password = form.password.value
         console.log(name, email, password, photo)
+       
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
                 updateUserData(result.user,name,photo)
                 console.log(createdUser)
+                setError('')
             })
             .catch(error => {
-                console.log(error);
+                setError(error.message);
             })
 
         const updateUserData = (user,name, photo) => {
@@ -33,7 +36,7 @@ const Register = () => {
             .then(()=>{
                 console.log('user name updated')
             })
-            .catch(error =>console.log(error))
+            .catch(error => setError(error.message))
         }
 
 
@@ -73,12 +76,11 @@ const Register = () => {
                 <br />
                 <Form.Text>
                     Already have an account?<Link to="/login">Login</Link></Form.Text>
-                <Button className='mb-2 mt-2' variant="primary" type="submit">
-                    Sign-in with google
-                </Button>  <br />
-                <Button variant="primary" type="submit">
-                    Sign-in with github
-                </Button>
+                    <br />
+                    <Form.Text className='text-danger'>
+                        {error}
+                    </Form.Text>
+                     
             </Form></Container>
     );
 };

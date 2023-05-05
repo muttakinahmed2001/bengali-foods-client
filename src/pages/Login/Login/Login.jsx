@@ -1,11 +1,12 @@
 
-import { useContext } from 'react';
+import { useContext, useState  } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
-    const {signIn}=useContext(AuthContext);
+    const [error,setError]=useState('');
+    const {signIn,googleSignIn}=useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -13,13 +14,27 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password)
+
 signIn(email,password)
 .then(result =>{
     const loggedUser = result.user;
     console.log(loggedUser)
+    setError('')
 } ) 
-.catch(error => console.log(error))
+.catch(error =>   setError(error.message))
 
+
+
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+.then(result => {
+    const user = result.user;
+    console.log(user)
+    setError('')
+})
+.catch(error => setError(error.message))
     }
     return (
          
@@ -42,10 +57,14 @@ signIn(email,password)
                 <Button className='mb-2' variant="primary" type="submit">
                     Login
                 </Button>
-
                 <br />
+               
                 <Form.Text> Don't have an account? <Link to='/register'>Register</Link></Form.Text>
-                <Button className='mb-2 mt-2' variant="primary" type="submit">
+                <Form.Text></Form.Text>
+                <br />
+                <Form.Text className='text-danger'>{error}</Form.Text>
+                <br />
+                <Button onClick={handleGoogleSignIn} className='mb-2 mt-2' variant="primary" type="submit">
                     Sign-in with google
                 </Button>  <br />
                 <Button variant="primary" type="submit">
