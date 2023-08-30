@@ -6,7 +6,7 @@ import { Card, CardGroup, Container } from "react-bootstrap";
 const Home = () => {
   return (
     <div>
-      <div className=" d-flex flex-column flex-md-row flex-sm-row gap-4 align-items-center  bg-warning">
+      <div className=" d-flex flex-column   flex-sm-row gap-4 align-items-center  bg-warning">
         <img className="banner img-fluid" src={banner} alt="" />
 
         <div className="text-center mt-4  w-100">
@@ -26,7 +26,7 @@ const Home = () => {
           <CardGroup className="gap-4 mb-5">
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJTN3I5l98fSspfTdwEDF7TsvdWlj8QiNjXw-mrVLpQHDk46rMFdppjfXHDpUqefgrYE&usqp=CAU"
@@ -71,7 +71,7 @@ const Home = () => {
           <CardGroup className="gap-4">
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid "
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://www.saveur.com/uploads/2019/02/08/GG4TS7RE3O7XBRYPKGQ2RLS3NY-e1630714905711.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1440"
@@ -86,7 +86,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://i0.wp.com/palatablepastime.com/wp-content/uploads/2017/12/fish-bhuna-sq.jpg?resize=500%2C500&ssl=1"
@@ -101,7 +101,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://yellowchilis.com/wp-content/uploads/2020/11/chicken-biryani-pressure-cooker-south-india-square-500x500.jpg"
@@ -120,7 +120,7 @@ const Home = () => {
           <CardGroup className="gap-4">
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJTN3I5l98fSspfTdwEDF7TsvdWlj8QiNjXw-mrVLpQHDk46rMFdppjfXHDpUqefgrYE&usqp=CAU"
@@ -131,7 +131,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://yellowchilis.com/wp-content/uploads/2020/11/chicken-biryani-pressure-cooker-south-india-square-500x500.jpg"
@@ -142,7 +142,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://yellowchilis.com/wp-content/uploads/2020/11/chicken-biryani-pressure-cooker-south-india-square-500x500.jpg"
@@ -155,7 +155,7 @@ const Home = () => {
           <CardGroup className="gap-4 mt-4">
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3-500x500.jpg"
@@ -166,7 +166,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://yellowchilis.com/wp-content/uploads/2020/11/chicken-biryani-pressure-cooker-south-india-square-500x500.jpg"
@@ -177,7 +177,7 @@ const Home = () => {
             </Card>
             <Card className="border">
               <Card.Img
-                className="p-3"
+                className="p-3 img-fluid"
                 style={{ height: "300px" }}
                 variant="top"
                 src="https://www.bigbasket.com/media/uploads/recipe/w-l/2582_1_1.jpg"

@@ -23,7 +23,7 @@ const Header = () => {
         bg="light"
         variant="light">
         <Container>
-          <img src={logo} alt="" />
+          <img className="img-fluid" src={logo} alt="" />
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
@@ -37,26 +37,25 @@ const Header = () => {
             </Nav>
             <Nav>
               {user ? (
-                <div className="container">
+                <div>
                   <img
-                    className="rounded-5 me-2"
+                    className="rounded-5 me-2 mt-1 "
                     style={{ width: "40px" }}
                     data-toggle="tooltip"
                     title={user.displayName}
                     src={user.photoURL}
                   />
                   <Link>
-                    <Button
-                      onClick={handleLogOut}
-                      className="me-2"
-                      variant="secondary">
+                    <Button onClick={handleLogOut} variant="secondary">
                       Log out
                     </Button>
                   </Link>
                 </div>
               ) : (
                 <Link to="/login">
-                  <Button variant="secondary">Login</Button>
+                  <Button className="mt-1" variant="secondary">
+                    Login
+                  </Button>
                 </Link>
               )}
             </Nav>

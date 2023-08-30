@@ -16,10 +16,14 @@ const ChefDetails = () => {
   return (
     <Container>
       {" "}
-      <div className="card mb-3 bg-warning">
-        <div className="d-flex ">
+      <div className="card mb-3 bg-warning mt-5">
+        <div className="d-flex flex-column flex-sm-row ">
           <div>
-            <img src={picture} className="img-fluid rounded-start" alt="..." />
+            <img
+              src={picture}
+              className="img-fluid rounded-start h-100"
+              alt="..."
+            />
           </div>
           <div>
             <div className="card-body">
@@ -45,7 +49,7 @@ const ChefDetails = () => {
         </div>
       </div>
       <CardGroup className="mt-5 p-5">
-        <Card className="me-5 bg-warning">
+        <Card className="w-100  me-5 bg-warning">
           <Card.Body className="btn-container">
             <Card.Title>{recipes[0].name}</Card.Title>
             <Card.Text>
@@ -58,13 +62,13 @@ const ChefDetails = () => {
             <Button
               disabled={favorite.includes(recipes[0].name)}
               onClick={() => handleFavorite(recipes[0].name)}
-              className="btn-recipe bg-danger btn-one"
+              className="btn-recipe mb-2 bg-danger btn-one"
               variant="primary">
               Favorite
             </Button>
           </Card.Body>
         </Card>
-        <Card className="me-5 bg-warning">
+        <Card className="w-100  me-5 bg-warning">
           <Card.Body className="btn-container">
             <Card.Title>{recipes[1].name}</Card.Title>
             <Card.Text>
@@ -74,7 +78,9 @@ const ChefDetails = () => {
             <Card.Text className="mb-5">
               Ratings: {recipes[1].ratings}
             </Card.Text>
-            <Button className="me-0 btn-recipe bg-danger" variant="primary">
+            <Button
+              className="me-0 btn-recipe mb-2 bg-danger"
+              variant="primary">
               Favorite
             </Button>
           </Card.Body>
@@ -89,7 +95,7 @@ const ChefDetails = () => {
             <Card.Text className="mb-5">
               Ratings: {recipes[2].ratings}
             </Card.Text>
-            <Button className="btn-recipe bg-danger" variant="primary">
+            <Button className="btn-recipe mb-2 bg-danger" variant="primary">
               Favorite
             </Button>
           </Card.Body>
