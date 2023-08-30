@@ -20,9 +20,10 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
-                updateUserData(result.user,name,photo)
+            
                 console.log(createdUser)
-                setError('')
+                updateUserData(result.user,name,photo)
+               
             })
             .catch(error => {
                 setError(error.message);

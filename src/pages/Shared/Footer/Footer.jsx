@@ -5,7 +5,7 @@ import './Footer.css'
 import { FaCopyright, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
     return (
-        <Container> <Card className="text-center footer w-100 mt-5 mx-auto">
+        <Card className="text-center footer w-100 mt-5 mx-auto">
         <Card.Header>Bengali Foods</Card.Header>
         <Card.Body>
           <Card.Title>Eat healthy food ,stay healthy</Card.Title>
@@ -22,7 +22,7 @@ const Footer = () => {
          </Card.Text>
         </Card.Body>
         <Card.Footer className="text-muted">Copyright <FaCopyright></FaCopyright> 2022 Bengali Foods</Card.Footer>
-      </Card></Container>
+      </Card> 
             
         
     );

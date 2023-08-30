@@ -2,14 +2,18 @@
 import { Button, Card, CardGroup, Container  } from 'react-bootstrap';
 import {   useLoaderData  } from 'react-router-dom';
 import './ChefDetails.css'
+import { useState } from 'react';
 
 const ChefDetails = ( ) => {
    const chef = useLoaderData()
-   
+   const [favorite,setFavorite]=useState([]);
    console.log(chef)
-   const {name,picture,likes,bio,numRecipes,experience,recipes, }=chef;
+   const { name,picture,likes,bio,numRecipes,experience,recipes, }=chef;
    
-    
+    const handleFavorite = (id)=>{
+      const newRecipe = [...favorite,id]
+      setFavorite(newRecipe);
+    }
     return (
       <Container> <div className="card mb-3 bg-warning" >
       <div className="row g-0">
@@ -43,7 +47,7 @@ const ChefDetails = ( ) => {
               <Card.Text className='mb-5'>
                   Ratings: {recipes[0].ratings}
               </Card.Text>
-              <Button  className='btn-recipe bg-danger btn-one' variant="primary">Favorite</Button>
+              <Button disabled={favorite.includes(recipes[0].name)} onClick={()=>handleFavorite(recipes[0].name)}  className='btn-recipe bg-danger btn-one' variant="primary">Favorite</Button>
             </Card.Body>
              
           </Card>

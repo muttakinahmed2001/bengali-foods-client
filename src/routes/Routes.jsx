@@ -6,6 +6,7 @@ import ChefDetails from "../pages/ChefDetails/ChefDetails/ChefDetails";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import Error from "../pages/Error/Error";
+import Blog from "../pages/Blog/Blog";
  
  
  
