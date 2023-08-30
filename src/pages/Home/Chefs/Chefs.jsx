@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import Chef from '../Chef/Chef';
-import './Chefs.css'
- 
+import React, { useEffect, useState } from "react";
+import Chef from "../Chef/Chef";
+import "./Chefs.css";
+import { Container } from "react-bootstrap";
 
 const Chefs = () => {
-    const [chefs,setChefs]=useState([]);
+  const [chefs, setChefs] = useState([]);
 
-      useEffect(() => {
-        fetch('https://assignment-10-server-muttakinahmed2001.vercel.app/chefs')
-        .then(res => res.json())
-        .then(data =>  setChefs(data))
-        .catch(error => console.log(error))
-      },[])
-    return (
-        <div className='chefs'>
-            {chefs.map(chef => <Chef key={chef.id} chef={chef}></Chef>)}
-            
-        </div>
-    );
+  useEffect(() => {
+    fetch("https://assignment-10-server-muttakinahmed2001.vercel.app/chefs")
+      .then((res) => res.json())
+      .then((data) => setChefs(data))
+      .catch((error) => console.log(error));
+  }, []);
+  return (
+    <div className="chefs">
+      {chefs.map((chef) => (
+        <Chef key={chef.id} chef={chef}></Chef>
+      ))}
+    </div>
+  );
 };
 
 export default Chefs;
