@@ -2,11 +2,12 @@ import banner from "../../../assets/hilisha.jpg";
 import "./Home.css";
 import Chefs from "../Chefs/Chefs";
 import { Card, CardGroup, Container } from "react-bootstrap";
+import Gallery from "../../Gallery/Gallery";
 
 const Home = () => {
   return (
     <div>
-      <div className=" d-flex flex-column   flex-sm-row gap-4 align-items-center  bg-warning">
+      <div className=" mb-10 d-flex flex-column   flex-sm-row gap-4 align-items-center  bg-warning">
         <img className="banner img-fluid" src={banner} alt="" />
 
         <div className="text-center mt-4  w-100">
@@ -14,7 +15,9 @@ const Home = () => {
           <h4>with the touch of the best chefs of Bangladesh</h4>
         </div>
       </div>
+
       <Container>
+        <Gallery></Gallery>
         <div className="mt-5">
           <h1 className="text-center mt-3 mb-5">
             6 well known chefs of Bangladesh
