@@ -2,6 +2,7 @@ import { Button, Card, CardGroup, Container } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import "./ChefDetails.css";
 import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 const ChefDetails = () => {
   const chef = useLoaderData();
@@ -12,10 +13,11 @@ const ChefDetails = () => {
   const handleFavorite = (id) => {
     const newRecipe = [...favorite, id];
     setFavorite(newRecipe);
+    toast("The recipe is your favorite.");
   };
   return (
     <Container>
-      {" "}
+      <Toaster />{" "}
       <div className="card mb-3 bg-warning mt-5">
         <div className="d-flex flex-column flex-sm-row ">
           <div>
@@ -59,13 +61,15 @@ const ChefDetails = () => {
             <Card.Text className="mb-5">
               Ratings: {recipes[0].ratings}
             </Card.Text>
-            <Button
-              disabled={favorite.includes(recipes[0].name)}
-              onClick={() => handleFavorite(recipes[0].name)}
-              className="btn-recipe mb-2 bg-danger btn-one"
-              variant="primary">
-              Favorite
-            </Button>
+            <div>
+              <Button
+                disabled={favorite.includes(recipes[0].name)}
+                onClick={() => handleFavorite(recipes[0].name)}
+                className="btn-recipe mb-2 bg-danger btn-one"
+                variant="primary">
+                Favorite
+              </Button>
+            </div>
           </Card.Body>
         </Card>
         <Card className="w-100  me-5 bg-warning">
@@ -79,6 +83,8 @@ const ChefDetails = () => {
               Ratings: {recipes[1].ratings}
             </Card.Text>
             <Button
+              disabled={favorite.includes(recipes[1].name)}
+              onClick={() => handleFavorite(recipes[1].name)}
               className="me-0 btn-recipe mb-2 bg-danger"
               variant="primary">
               Favorite
@@ -95,7 +101,11 @@ const ChefDetails = () => {
             <Card.Text className="mb-5">
               Ratings: {recipes[2].ratings}
             </Card.Text>
-            <Button className="btn-recipe mb-2 bg-danger" variant="primary">
+            <Button
+              disabled={favorite.includes(recipes[2].name)}
+              onClick={() => handleFavorite(recipes[2].name)}
+              className="btn-recipe mb-2 bg-danger"
+              variant="primary">
               Favorite
             </Button>
           </Card.Body>
