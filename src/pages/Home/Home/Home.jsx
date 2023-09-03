@@ -77,7 +77,7 @@ const Home = () => {
                 className="p-3 img-fluid "
                 style={{ height: "300px" }}
                 variant="top"
-                src="https://www.saveur.com/uploads/2019/02/08/GG4TS7RE3O7XBRYPKGQ2RLS3NY-e1630714905711.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1440"
+                src="https://www.munatycooking.com/wp-content/uploads/2020/04/Mutton-Korma-Recipe-feature-image-500x500.jpg"
               />
               <Card.Body>
                 <Card.Title>Chicken Kebab</Card.Title>
