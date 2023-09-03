@@ -3,7 +3,8 @@ import { Container } from "react-bootstrap";
 const Blog = () => {
   return (
     <Container>
-      <div>
+      <div className="mt-5">
+        <h1 className="text-center text-3xl">Blogs</h1>
         <h1>
           1.What is the difference between uncontrolled and controlled
           components?
