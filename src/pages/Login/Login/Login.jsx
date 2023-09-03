@@ -67,7 +67,7 @@ const Login = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
-        <Button className="mb-2" variant="primary" type="submit">
+        <Button className="mb-2 bg-success" type="submit">
           Login
         </Button>
         <br />
@@ -81,13 +81,15 @@ const Login = () => {
         <br />
         <Button
           onClick={handleGoogleSignIn}
-          className="mb-2 mt-2"
-          variant="primary"
+          className="mb-2 mt-2 bg-success"
           type="submit">
           Sign-in with google
         </Button>{" "}
         <br />
-        <Button onClick={handleGithubSignIn} variant="primary" type="submit">
+        <Button
+          className="bg-success"
+          onClick={handleGithubSignIn}
+          type="submit">
           Sign-in with github
         </Button>
       </Form>

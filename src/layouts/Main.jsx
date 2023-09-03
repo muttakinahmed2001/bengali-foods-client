@@ -1,20 +1,21 @@
-import React from 'react';
-import Header from '../pages/Shared/Header/Header';
-import Footer from '../pages/Shared/Footer/Footer';
-import Home from '../pages/Home/Home/Home';
-import { Container } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import Header from "../pages/Shared/Header/Header";
+import Footer from "../pages/Shared/Footer/Footer";
+import { Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { LoadingContext } from "../providers/LoadingProvider";
+import Spinner from "../pages/Spinner";
 
 const Main = () => {
-    return (
-        <div>
-            <Header></Header>
-              <Outlet></Outlet>
-           
-            <Footer></Footer> 
-            
-        </div>
-    );
+  const { isLoading } = useContext(LoadingContext);
+  return (
+    <div>
+      <Header></Header>
+      {isLoading ? <Spinner></Spinner> : ""}
+      <Outlet></Outlet>
+
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Main;

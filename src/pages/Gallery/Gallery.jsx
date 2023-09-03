@@ -1,18 +1,20 @@
 "./Gallery.css";
 const Gallery = () => {
   const foods = [
-    "../../../public/bhunakichuri.jpg",
-    "../../../public/dal.jpg",
-    "../../../public/kacchi.png",
-    "../../../public/kalabhuna.jpg",
-    "../../../public/shikkabab.jpeg",
-    "../../../public/shrosheilish.jpg",
-    "../../../public/bortha.jpg",
-    "../../../public/fuchka.jpg",
+    "https://rumkisgoldenspoon.com/wp-content/uploads/2021/05/Bhuna-khichuri-recipe-585x585.jpg",
+    "https://www.cookinwithmima.com/wp-content/uploads/2020/04/lebanese-lentil-soup-5.jpg",
+    "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2020/09/25/dhaka-kachchi-tbs.jpg",
+    "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2022/07/10/kalabhuna.jpg",
+    "https://www.ndtv.com/cooks/images/seekh-kebab-620.jpg",
+    "https://img-global.cpcdn.com/recipes/43c47858c7446283/400x400cq70/photo.jpg",
+    "https://i0.wp.com/cookingcanary.com/wp-content/uploads/2022/07/Begun-bhorta-in-serving-dish.jpg?resize=600%2C530&ssl=1",
+    "https://static.toiimg.com/thumb/imgsize-23456,msid-93980278,width-600,resizemode-4/93980278.jpg",
   ];
 
   return (
-    <div className="row row-cols-2 row-cols-sm-3 mt-5 mx-auto gap-4">
+    <div
+      style={{ marginTop: "150px", marginBottom: "150px" }}
+      className="row row-cols-2 row-cols-sm-3 mx-auto gap-4">
       {foods.map((food, index) => (
         <div
           className="col"

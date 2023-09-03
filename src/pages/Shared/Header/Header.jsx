@@ -5,6 +5,7 @@ import { Button, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { useContext } from "react";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const Header = () => {
   };
   return (
     <Navbar
-      className="mt-2"
+      className="mt-25"
       collapseOnSelect
       expand="lg"
       bg="light"
@@ -26,13 +27,15 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mx-auto">
-          <Link className="me-2 text-decoration-none text-black" to="/">
+          <ActiveLink className="me-2 text-decoration-none text-black" to="/">
             Home
-          </Link>
+          </ActiveLink>
 
-          <Link to="/blog" className="text-decoration-none text-black">
+          <ActiveLink
+            to="/blog"
+            className="me-2 text-decoration-none text-black">
             Blog{" "}
-          </Link>
+          </ActiveLink>
         </Nav>
         <Nav>
           {user ? (
@@ -45,14 +48,14 @@ const Header = () => {
                 src={user.photoURL}
               />
               <Link>
-                <Button onClick={handleLogOut} variant="secondary">
+                <Button className="bg-success" onClick={handleLogOut}>
                   Log out
                 </Button>
               </Link>
             </div>
           ) : (
             <Link to="/login">
-              <Button className="mt-1 me-2" variant="secondary">
+              <Button className="mt-1 me-2 bg-success" variant="secondary">
                 Login
               </Button>
             </Link>

@@ -9,7 +9,13 @@ const Chef = ({ chef }) => {
   return (
     <Container>
       <Card className="p-3">
-        <Card.Img className="img-fluid " variant="top" src={picture} />
+        <div style={{ height: "200px" }}>
+          <Card.Img
+            className="img-fluid w-100 h-100"
+            variant="top"
+            src={picture}
+          />
+        </div>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>Years of experience:{experience}</Card.Text>
