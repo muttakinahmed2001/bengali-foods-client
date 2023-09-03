@@ -14,7 +14,9 @@ const Gallery = () => {
   // className="row row-cols-2 row-cols-sm-4 row-cols-md-4"
   return (
     <div className="mx-auto">
-      <div style={{ marginTop: "150px", marginBottom: "150px" }} className="">
+      <div
+        style={{ marginTop: "150px", marginBottom: "150px" }}
+        className="row row-cols-2 row-cols-sm-4 row-cols-md-4">
         {foods.map((food, index) => (
           <div
             className="col"
