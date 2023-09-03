@@ -60,13 +60,12 @@ const Home = () => {
                 className="p-3"
                 style={{ height: "300px" }}
                 variant="top"
-                src="https://nishkitchen.com/wp-content/uploads/2016/04/Lamb-Korma-B-480x480.jpg"
+                src="https://khadizaskitchen.files.wordpress.com/2013/02/484123_10150963176301746_908326510_n.jpg"
               />
               <Card.Body>
                 <Card.Title>Lamb Korma</Card.Title>
                 <Card.Text className="fw-semibold">
-                  <span className="fw-bold">Chef</span>
-                  Imran Ahmed
+                  <span className="fw-bold">Chef</span> Imran Ahmed
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -82,8 +81,7 @@ const Home = () => {
               <Card.Body>
                 <Card.Title>Chicken Kebab</Card.Title>
                 <Card.Text className="fw-semibold">
-                  <span className="fw-bold">Chef</span>
-                  Kamal Ahmed
+                  <span className="fw-bold">Chef</span> Kamal Ahmed
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -97,8 +95,7 @@ const Home = () => {
               <Card.Body>
                 <Card.Title>Fish Bhuna</Card.Title>
                 <Card.Text className="fw-semibold">
-                  <span className="fw-bold">Chef</span>
-                  Nasir Uddin
+                  <span className="fw-bold">Chef</span> Nasir Uddin
                 </Card.Text>
               </Card.Body>
             </Card>
